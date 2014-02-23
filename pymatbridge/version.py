@@ -87,14 +87,10 @@ MICRO = _version_micro
 VERSION = __version__
 PACKAGES = ['pymatbridge']
 PACKAGE_DIR = {'pymatbridge':'./pymatbridge'}
-#DATA_FILES = [('matlab', ['*.m']),
-#              ('matlab/utils', ['*.m'])]              
-
-
 PACKAGE_DATA = {"pymatbridge": ["matlab/*.m", "matlab/usrprog/*.m",
-                                "matlab/util/*.m", "test/*.m", "test/*.py",
+                                "matlab/util/*.m",
+     "matlab/util/publish-notebook", "test/*.m", "test/*.py",
                                 "examples/*.ipynb"]} 
-
 REQUIRES = []
 
-BIN='bin/'
+BIN=['pymatbridge/matlab/util/publish-notebook']
