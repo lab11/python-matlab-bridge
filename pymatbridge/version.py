@@ -86,8 +86,15 @@ MINOR = _version_minor
 MICRO = _version_micro
 VERSION = __version__
 PACKAGES = ['pymatbridge']
-PACKAGE_DATA = {"pymatbridge": ["matlab/*.m", "matlab/functions/*.m",
-                                "matlab/private/*.m", "matlab/www/*.m",
-                                "test/*.m", "test/*.py", "examples/*.ipynb"]}
+PACKAGE_DIR = {'pymatbridge':'./pymatbridge'}
+#DATA_FILES = [('matlab', ['*.m']),
+#              ('matlab/utils', ['*.m'])]              
+
+
+PACKAGE_DATA = {"pymatbridge": ["matlab/*.m", "matlab/usrprog/*.m",
+                                "matlab/util/*.m", "test/*.m", "test/*.py",
+                                "examples/*.ipynb"]} 
 
 REQUIRES = []
+
+BIN='bin/'
